@@ -1,0 +1,400 @@
+{
+    "_enzyme_concentration_total": 0.00274,
+    "_enzyme_module_forms_categorized": {
+        "PGK_Active": [
+            "pgk__13dpg_c",
+            "pgk_adp_c",
+            "pgk__13dpg_adp_c"
+        ],
+        "PGK_Inhibited": [
+            "pgk__23dpg_c",
+            "pgk__3pg_c",
+            "pgk__13dpg_atp_c",
+            "pgk_adp_atp_c"
+        ],
+        "PGK_PGK_Active": [
+            "pgk_c"
+        ]
+    },
+    "_enzyme_module_ligands_categorized": {
+        "PGK_cofactors": [
+            "adp_c"
+        ],
+        "PGK_inhibitors": [
+            "_23dpg_c",
+            "_3pg_c",
+            "atp_c"
+        ],
+        "PGK_products": [
+            "_3pg_c",
+            "atp_c"
+        ],
+        "PGK_substrates": [
+            "_13dpg_c"
+        ]
+    },
+    "_enzyme_module_reactions_categorized": {
+        "PGK__13dpg_c_binding": [
+            "PGK_1",
+            "PGK_3"
+        ],
+        "PGK__23dpg_c_inhibition": [
+            "PGK_6"
+        ],
+        "PGK__3pg_c_inhibition": [
+            "PGK_7"
+        ],
+        "PGK_adp_c_binding": [
+            "PGK_2",
+            "PGK_4"
+        ],
+        "PGK_atp_c_inhibition": [
+            "PGK_8",
+            "PGK_9"
+        ],
+        "PGK_catalyzation": [
+            "PGK_5"
+        ]
+    },
+    "_enzyme_rate": 1.7584797272120862,
+    "_enzyme_rate_equation": "kf_PGK_5*(Keq_PGK_5*pgk__13dpg_adp_c(t) - _3pg_c(t)*atp_c(t)*pgk_c(t))/Keq_PGK_5",
+    "boundary_conditions": {},
+    "compartments": {
+        "c": ""
+    },
+    "custom_parameters": {
+        "Keq_PGK_A": 34.48275862068965,
+        "Keq_PGK_D": 17857.14285714286,
+        "kf_PGK_A": 21932630.154759776,
+        "kf_PGK_D": 74869688.40508159
+    },
+    "custom_rates": {
+        "PGK_1": "kf_PGK_D*(_13dpg_c(t)*pgk_c(t) - pgk__13dpg_c(t)/Keq_PGK_D)",
+        "PGK_2": "kf_PGK_A*(adp_c(t)*pgk_c(t) - pgk_adp_c(t)/Keq_PGK_A)",
+        "PGK_3": "kf_PGK_D*(_13dpg_c(t)*pgk_adp_c(t) - pgk__13dpg_adp_c(t)/Keq_PGK_D)",
+        "PGK_4": "kf_PGK_A*(adp_c(t)*pgk__13dpg_c(t) - pgk__13dpg_adp_c(t)/Keq_PGK_A)"
+    },
+    "enzyme_concentration_total_equation": "pgk__13dpg_adp_c(t) + pgk__13dpg_atp_c(t) + pgk__13dpg_c(t) + pgk__23dpg_c(t) + pgk__3pg_c(t) + pgk_adp_atp_c(t) + pgk_adp_c(t) + pgk_c(t)",
+    "enzyme_module_forms": [
+        "pgk_c",
+        "pgk__13dpg_c",
+        "pgk_adp_c",
+        "pgk__13dpg_adp_c",
+        "pgk__23dpg_c",
+        "pgk__3pg_c",
+        "pgk__13dpg_atp_c",
+        "pgk_adp_atp_c"
+    ],
+    "enzyme_module_ligands": [
+        "_13dpg_c",
+        "_3pg_c",
+        "adp_c",
+        "atp_c",
+        "_23dpg_c"
+    ],
+    "enzyme_module_reactions": [
+        "PGK_1",
+        "PGK_2",
+        "PGK_3",
+        "PGK_4",
+        "PGK_5",
+        "PGK_6",
+        "PGK_7",
+        "PGK_8",
+        "PGK_9"
+    ],
+    "enzyme_modules": [],
+    "genes": [],
+    "id": "PGK",
+    "metabolites": [
+        {
+            "_initial_condition": 0.000305102571904311,
+            "charge": -4,
+            "compartment": "c",
+            "formula": "C3H4O10P2",
+            "id": "_13dpg_c",
+            "name": "3-Phospho-D-glyceroyl phosphate"
+        },
+        {
+            "_initial_condition": 0.09747344554509503,
+            "charge": -3,
+            "compartment": "c",
+            "formula": "C3H4O7P",
+            "id": "_3pg_c",
+            "name": "3-Phospho-D-glycerate"
+        },
+        {
+            "_initial_condition": 0.22421213834735115,
+            "charge": -3,
+            "compartment": "c",
+            "formula": "C10H12N5O10P2",
+            "id": "adp_c",
+            "name": "ADP C10H12N5O10P2"
+        },
+        {
+            "_initial_condition": 1.232668210479202,
+            "charge": -4,
+            "compartment": "c",
+            "formula": "C10H12N5O13P3",
+            "id": "atp_c",
+            "name": "ATP C10H12N5O13P3"
+        },
+        {
+            "_initial_condition": 3.8922550325241327,
+            "charge": -5,
+            "compartment": "c",
+            "formula": "C3H3O10P2",
+            "id": "_23dpg_c",
+            "name": "2 3 Disphospho D glycerate C3H3O10P2"
+        },
+        {
+            "_bound_metabolites": {},
+            "_initial_condition": 3.864934085869804e-05,
+            "charge": 0,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]",
+            "id": "pgk_c",
+            "name": "PGK"
+        },
+        {
+            "_bound_metabolites": {
+                "_13dpg_c": 1
+            },
+            "_initial_condition": 0.00016105271877775635,
+            "charge": -4,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C3H4O10P2",
+            "id": "pgk__13dpg_c",
+            "name": "PGK-_13dpg complex"
+        },
+        {
+            "_bound_metabolites": {
+                "adp_c": 1
+            },
+            "_initial_condition": 0.00029637728003705226,
+            "charge": -3,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C10H12N5O10P2",
+            "id": "pgk_adp_c",
+            "name": "PGK-adp complex"
+        },
+        {
+            "_bound_metabolites": {
+                "_13dpg_c": 1,
+                "adp_c": 1
+            },
+            "_initial_condition": 0.00124484511324824,
+            "charge": -7,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C13H16O20P4N5",
+            "id": "pgk__13dpg_adp_c",
+            "name": "PGK-_13dpg-adp complex"
+        },
+        {
+            "_bound_metabolites": {
+                "_23dpg_c": 1
+            },
+            "_initial_condition": 6.268045477542e-05,
+            "charge": -5,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C3H3O10P2",
+            "id": "pgk__23dpg_c",
+            "name": "PGK-_23dpg complex"
+        },
+        {
+            "_bound_metabolites": {
+                "_3pg_c": 1
+            },
+            "_initial_condition": 1.8376997178263998e-05,
+            "charge": -3,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C3H4O7P1",
+            "id": "pgk__3pg_c",
+            "name": "PGK-_3pg complex"
+        },
+        {
+            "_bound_metabolites": {
+                "_13dpg_c": 1,
+                "atp_c": 1
+            },
+            "_initial_condition": 0.00010616286986555459,
+            "charge": -8,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C13H16O23P5N5",
+            "id": "pgk__13dpg_atp_c",
+            "name": "PGK-_13dpg-atp complex"
+        },
+        {
+            "_bound_metabolites": {
+                "adp_c": 1,
+                "atp_c": 1
+            },
+            "_initial_condition": 0.000811855225355481,
+            "charge": -7,
+            "compartment": "c",
+            "enzyme_module_id": "PGK",
+            "formula": "[PGK]-C20H24N10O23P5",
+            "id": "pgk_adp_atp_c",
+            "name": "PGK-adp-atp complex"
+        }
+    ],
+    "name": "Phosphoglycerate kinase",
+    "reactions": [
+        {
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_1",
+            "metabolites": {
+                "_13dpg_c": -1,
+                "pgk__13dpg_c": 1,
+                "pgk_c": -1
+            },
+            "name": "pgk-_13dpg binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_2",
+            "metabolites": {
+                "adp_c": -1,
+                "pgk_adp_c": 1,
+                "pgk_c": -1
+            },
+            "name": "pgk-adp binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_3",
+            "metabolites": {
+                "_13dpg_c": -1,
+                "pgk__13dpg_adp_c": 1,
+                "pgk_adp_c": -1
+            },
+            "name": "pgk_adp-_13dpg binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_4",
+            "metabolites": {
+                "adp_c": -1,
+                "pgk__13dpg_adp_c": 1,
+                "pgk__13dpg_c": -1
+            },
+            "name": "pgk__13dpg-adp binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 0.00374194,
+            "_forward_rate_constant": 459378.4061248458,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_5",
+            "metabolites": {
+                "_3pg_c": 1,
+                "atp_c": 1,
+                "pgk__13dpg_adp_c": -1,
+                "pgk_c": 1
+            },
+            "name": "pgk__13dpg_adp catalyzation",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 0.4166666666666667,
+            "_forward_rate_constant": 1000000.0,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_6",
+            "metabolites": {
+                "_23dpg_c": -1,
+                "pgk__23dpg_c": 1,
+                "pgk_c": -1
+            },
+            "name": "pgk-_23dpg binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 4.878048780487805,
+            "_forward_rate_constant": 1000000.0,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_7",
+            "metabolites": {
+                "_3pg_c": -1,
+                "pgk__3pg_c": 1,
+                "pgk_c": -1
+            },
+            "name": "pgk-_3pg binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 0.53475935828877,
+            "_forward_rate_constant": 1000000.0,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_8",
+            "metabolites": {
+                "atp_c": -1,
+                "pgk__13dpg_atp_c": 1,
+                "pgk__13dpg_c": -1
+            },
+            "name": "pgk__13dpg-atp binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 2.2222222222222223,
+            "_forward_rate_constant": 1000000.0,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGK",
+            "gene_reaction_rule": "",
+            "id": "PGK_9",
+            "metabolites": {
+                "atp_c": -1,
+                "pgk_adp_atp_c": 1,
+                "pgk_adp_c": -1
+            },
+            "name": "pgk_adp-atp binding",
+            "subsystem": "Glycolysis"
+        }
+    ],
+    "subsystem": "Glycolysis",
+    "units": [],
+    "version": "1"
+}

@@ -1,0 +1,244 @@
+{
+    "_enzyme_concentration_total": 0.00097,
+    "_enzyme_module_forms_categorized": {
+        "ADK1_Active": [
+            "adk1_c",
+            "adk1_amp_c",
+            "adk1_amp_atp_c",
+            "adk1_adp_adp_c",
+            "adk1_adp_c"
+        ]
+    },
+    "_enzyme_module_ligands_categorized": {
+        "ADK1_products": [
+            "adp_c"
+        ],
+        "ADK1_substrates": [
+            "amp_c",
+            "atp_c"
+        ]
+    },
+    "_enzyme_module_reactions_categorized": {
+        "ADK1_adp_adp_c_releasing": [
+            "ADK1_4"
+        ],
+        "ADK1_adp_c_releasing": [
+            "ADK1_5"
+        ],
+        "ADK1_amp_c_binding": [
+            "ADK1_1"
+        ],
+        "ADK1_atp_c_binding": [
+            "ADK1_2"
+        ],
+        "ADK1_catalyzation": [
+            "ADK1_3"
+        ]
+    },
+    "_enzyme_rate": 0.009175570650499232,
+    "_enzyme_rate_equation": "kf_ADK1_3*(Keq_ADK1_3*adk1_amp_atp_c(t) - adk1_adp_adp_c(t))/Keq_ADK1_3",
+    "boundary_conditions": {},
+    "compartments": {
+        "c": ""
+    },
+    "custom_parameters": {},
+    "custom_rates": {},
+    "enzyme_concentration_total_equation": "adk1_adp_adp_c(t) + adk1_adp_c(t) + adk1_amp_atp_c(t) + adk1_amp_c(t) + adk1_c(t)",
+    "enzyme_module_forms": [
+        "adk1_c",
+        "adk1_amp_c",
+        "adk1_amp_atp_c",
+        "adk1_adp_adp_c",
+        "adk1_adp_c"
+    ],
+    "enzyme_module_ligands": [
+        "amp_c",
+        "adp_c",
+        "atp_c"
+    ],
+    "enzyme_module_reactions": [
+        "ADK1_1",
+        "ADK1_2",
+        "ADK1_3",
+        "ADK1_4",
+        "ADK1_5"
+    ],
+    "enzyme_modules": [],
+    "genes": [],
+    "id": "ADK1",
+    "metabolites": [
+        {
+            "_initial_condition": 0.05653374262248433,
+            "charge": -2,
+            "compartment": "c",
+            "formula": "C10H12N5O7P",
+            "id": "amp_c",
+            "name": "AMP C10H12N5O7P"
+        },
+        {
+            "_initial_condition": 0.18898414494340585,
+            "charge": -3,
+            "compartment": "c",
+            "formula": "C10H12N5O10P2",
+            "id": "adp_c",
+            "name": "ADP C10H12N5O10P2"
+        },
+        {
+            "_initial_condition": 1.0423847825964077,
+            "charge": -4,
+            "compartment": "c",
+            "formula": "C10H12N5O13P3",
+            "id": "atp_c",
+            "name": "ATP C10H12N5O13P3"
+        },
+        {
+            "_bound_metabolites": {},
+            "_initial_condition": 0.0002404033133507672,
+            "charge": 0,
+            "compartment": "c",
+            "enzyme_module_id": "ADK1",
+            "formula": "[ADK]",
+            "id": "adk1_c",
+            "name": "ADK1"
+        },
+        {
+            "_bound_metabolites": {
+                "amp_c": 1
+            },
+            "_initial_condition": 1.1887874486617242e-05,
+            "charge": -2,
+            "compartment": "c",
+            "enzyme_module_id": "ADK1",
+            "formula": "[ADK]-C10H12N5O7P1",
+            "id": "adk1_amp_c",
+            "name": "ADK1-amp complex"
+        },
+        {
+            "_bound_metabolites": {
+                "amp_c": 1,
+                "atp_c": 1
+            },
+            "_initial_condition": 1.2442524382570666e-05,
+            "charge": -6,
+            "compartment": "c",
+            "enzyme_module_id": "ADK1",
+            "formula": "[ADK]-C20H24N10O20P4",
+            "id": "adk1_amp_atp_c",
+            "name": "ADK1-amp-atp complex"
+        },
+        {
+            "_bound_metabolites": {
+                "adp_c": 2
+            },
+            "_initial_condition": 0.00032616032517256464,
+            "charge": -6,
+            "compartment": "c",
+            "enzyme_module_id": "ADK1",
+            "formula": "[ADK]-C20H24N10O20P4",
+            "id": "adk1_adp_adp_c",
+            "name": "ADK1-adp complex"
+        },
+        {
+            "_bound_metabolites": {
+                "adp_c": 1
+            },
+            "_initial_condition": 0.0003791059626163535,
+            "charge": -3,
+            "compartment": "c",
+            "enzyme_module_id": "ADK1",
+            "formula": "[ADK]-C10H12N5O10P2",
+            "id": "adk1_adp_c",
+            "name": "ADK1-adp complex"
+        }
+    ],
+    "name": "Adenylate kinase",
+    "reactions": [
+        {
+            "_equilibrium_constant": 3.0303030303030303,
+            "_forward_rate_constant": 949.0758295021876,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "ADK1",
+            "gene_reaction_rule": "",
+            "id": "ADK1_1",
+            "metabolites": {
+                "adk1_amp_c": 1,
+                "adk1_c": -1,
+                "amp_c": -1
+            },
+            "name": "adk1-amp binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 1.0526315789473684,
+            "_forward_rate_constant": 16059.70138932584,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "ADK1",
+            "gene_reaction_rule": "",
+            "id": "ADK1_2",
+            "metabolites": {
+                "adk1_amp_atp_c": 1,
+                "adk1_amp_c": -1,
+                "atp_c": -1
+            },
+            "name": "adk1_amp-atp binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 27.471,
+            "_forward_rate_constant": 16107.993275424931,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "ADK1",
+            "gene_reaction_rule": "",
+            "id": "ADK1_3",
+            "metabolites": {
+                "adk1_adp_adp_c": 1,
+                "adk1_amp_atp_c": -1
+            },
+            "name": "adk1_amp_atp catalyzation",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 0.22,
+            "_forward_rate_constant": 18308.64029486818,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "ADK1",
+            "gene_reaction_rule": "",
+            "id": "ADK1_4",
+            "metabolites": {
+                "adk1_adp_adp_c": -1,
+                "adk1_adp_c": 1,
+                "adp_c": 1
+            },
+            "name": "adk1_adp_adp-adp release",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 0.12,
+            "_forward_rate_constant": 18259.569921201597,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "ADK1",
+            "gene_reaction_rule": "",
+            "id": "ADK1_5",
+            "metabolites": {
+                "adk1_adp_c": -1,
+                "adk1_c": 1,
+                "adp_c": 1
+            },
+            "name": "adk1_adp-adp release",
+            "subsystem": "Glycolysis"
+        }
+    ],
+    "subsystem": "Glycolysis",
+    "units": [],
+    "version": "1"
+}

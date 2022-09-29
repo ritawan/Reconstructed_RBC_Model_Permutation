@@ -1,0 +1,163 @@
+{
+    "_enzyme_concentration_total": 7.8e-05,
+    "_enzyme_module_forms_categorized": {
+        "PGI_Active": [
+            "pgi_c",
+            "pgi_g6p_c",
+            "pgi_f6p_c"
+        ]
+    },
+    "_enzyme_module_ligands_categorized": {
+        "PGI_products": [
+            "f6p_c"
+        ],
+        "PGI_substrates": [
+            "g6p_c"
+        ]
+    },
+    "_enzyme_module_reactions_categorized": {
+        "PGI_catalyzation": [
+            "PGI_2"
+        ],
+        "PGI_f6p_releasing": [
+            "PGI_3"
+        ],
+        "PGI_g6p_c_binding": [
+            "PGI_1"
+        ]
+    },
+    "_enzyme_rate": 0.909963254543603,
+    "_enzyme_rate_equation": "kf_PGI_2*(Keq_PGI_2*pgi_g6p_c(t) - pgi_f6p_c(t))/Keq_PGI_2",
+    "boundary_conditions": {},
+    "compartments": {
+        "c": ""
+    },
+    "custom_parameters": {},
+    "custom_rates": {},
+    "enzyme_concentration_total_equation": "pgi_c(t) + pgi_f6p_c(t) + pgi_g6p_c(t)",
+    "enzyme_module_forms": [
+        "pgi_c",
+        "pgi_g6p_c",
+        "pgi_f6p_c"
+    ],
+    "enzyme_module_ligands": [
+        "g6p_c",
+        "f6p_c"
+    ],
+    "enzyme_module_reactions": [
+        "PGI_1",
+        "PGI_2",
+        "PGI_3"
+    ],
+    "enzyme_modules": [],
+    "genes": [],
+    "id": "PGI",
+    "metabolites": [
+        {
+            "_initial_condition": 0.06307567680845606,
+            "charge": -2,
+            "compartment": "c",
+            "formula": "C6H11O9P",
+            "id": "g6p_c",
+            "name": "D-Glucose 6-phosphate"
+        },
+        {
+            "_initial_condition": 0.025735032579299412,
+            "charge": -2,
+            "compartment": "c",
+            "formula": "C6H11O9P",
+            "id": "f6p_c",
+            "name": "D-Fructose 6-phosphate"
+        },
+        {
+            "_bound_metabolites": {},
+            "_initial_condition": 6.027195772752057e-05,
+            "charge": 0,
+            "compartment": "c",
+            "enzyme_module_id": "PGI",
+            "formula": "[PGI]",
+            "id": "pgi_c",
+            "name": "PGI"
+        },
+        {
+            "_bound_metabolites": {
+                "g6p_c": 1
+            },
+            "_initial_condition": 4.462308741156535e-06,
+            "charge": -2,
+            "compartment": "c",
+            "enzyme_module_id": "PGI",
+            "formula": "[PGI]-C6H11O9P1",
+            "id": "pgi_g6p_c",
+            "name": "PGI-g6p complex"
+        },
+        {
+            "_bound_metabolites": {
+                "f6p_c": 1
+            },
+            "_initial_condition": 1.326573351119812e-05,
+            "charge": -2,
+            "compartment": "c",
+            "enzyme_module_id": "PGI",
+            "formula": "[PGI]-C6H11O9P1",
+            "id": "pgi_f6p_c",
+            "name": "PGI-f6p complex"
+        }
+    ],
+    "name": "Glucose-6-phosphate isomerase",
+    "reactions": [
+        {
+            "_equilibrium_constant": 1.1764705882352942,
+            "_forward_rate_constant": 104209027.064224,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGI",
+            "gene_reaction_rule": "",
+            "id": "PGI_1",
+            "metabolites": {
+                "g6p_c": -1,
+                "pgi_c": -1,
+                "pgi_g6p_c": 1
+            },
+            "name": "pgi-g6p binding",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 2.97863,
+            "_forward_rate_constant": 104921052.25848953,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGI",
+            "gene_reaction_rule": "",
+            "id": "PGI_2",
+            "metabolites": {
+                "pgi_f6p_c": 1,
+                "pgi_g6p_c": -1
+            },
+            "name": "pgi_g6p catalyzation",
+            "subsystem": "Glycolysis"
+        },
+        {
+            "_equilibrium_constant": 0.117,
+            "_forward_rate_constant": 107538388.21597564,
+            "_lower_bound": -1000.0,
+            "_reversible": true,
+            "_upper_bound": 1000.0,
+            "enzyme_module_id": "PGI",
+            "gene_reaction_rule": "",
+            "id": "PGI_3",
+            "metabolites": {
+                "f6p_c": 1,
+                "pgi_c": 1,
+                "pgi_f6p_c": -1
+            },
+            "name": "pgi_f6p-f6p release",
+            "subsystem": "Glycolysis"
+        }
+    ],
+    "subsystem": "Glycolysis",
+    "units": [],
+    "version": "1"
+}
